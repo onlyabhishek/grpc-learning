@@ -1,0 +1,45 @@
+message User {
+    Id string
+    Name string
+}
+
+
+services Rpc{
+    service RegisterUser (User) return (User)
+}
+
+
+json,xml,buffer
+
+
+json  http call 
+
+xml  <tag></tag>
+json {user:" "}
+buffer [bytes] it is faster in responsing and processing 
+
+
+grpc-header(Meta data)
+streaming 
+
+Types of grpc 
+
+1. Unary operation client => <= server
+2. Server streaming client => <= server // lazy loading 
+3. Client streaming 
+4. Bidirectional streaming 
+
+
+
+load balancing 
+
+
+protoc --proto_path=proto \
+       --go_out=. \
+       --go-grpc_out=. \
+       proto/Hello.proto
+
+
+
+
+
